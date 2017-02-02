@@ -9,7 +9,10 @@ user inputs bpkg-brew "Package name"
            
 bpkg-brew will download the xorg source from a specified mirror, or git, or wherever.
     probably using wget "URL" 
+
+
     xorg source is downloaded to /usr/bpkg/source/$PACKAGE_NAME 
+
     /usr/bpkg/source/$PACKAGE_NAME/BUILD is created as a seperate build dir
     
     bpkg runs ./configure, make and make install 
