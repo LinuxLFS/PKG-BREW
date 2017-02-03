@@ -10,7 +10,8 @@ txtrst=$(tput sgr0) # Reset
 
 echo""
 echo "${grn}  
-   $PWD
+LFS Package Brewery System 
+By: Derek Midkiff
 ${txtrst}"
   
 
@@ -18,16 +19,19 @@ ${txtrst}"
 wget=/usr/bin/wget
 tar=/bin/tar
 
-PACKAGE_NAME=$PWD  # I know this isnt right, i may need help to resolve this variable
-
-# Exports
-export HOST=lfs
-export BUILD_DIR=/usr/bpkg/source/$PACKAGE_NAME/BUILD
 
 # Functions
 
-function resolve-cpn-dir {     # gets Current Package Name Directory
-            
+# gets Package Name From User Input    
+            read -p 'Enter Package You would like to Brew : ' PKG_NAME   
+            echo "${grn}
+              You Would like to Brew $PKG_NAME ?
+            ${txtrst}"
+            wget -i $PWD/lists.d/packages/$PKG_NAME.bpkg -P /usr/bpkg/source/$PKG_NAME
+             
 
-function get-source-pkg {
-            cd $BUILD_DIR  # cd into /usr/bpkg/source/$PACKAGE_NAME/BUILD
+
+ 
+           
+            
+           
