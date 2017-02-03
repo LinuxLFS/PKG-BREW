@@ -9,6 +9,10 @@ red='\033[01;31m'
 export HOST=lfs
 export BUILD_DIR=/usr/bpkg/source/$PACKAGE_NAME/BUILD
 
+# These should be constant across lfs builds
+wget=/usr/bin/wget
+tar=/bin/tar
+
 # Functions
 
 function resolve-cpn-dir {     # gets Current Package Name Directory
