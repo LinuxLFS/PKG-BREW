@@ -1,0 +1,14 @@
+#####################################
+
+# BPKG Package manager Source List 
+
+#####################################
+
+# Just a Dummy Package
+SOURCEPKG=bpkgtest {
+      URL=https://www.mediafire.com/?t38petse15tpmy9
+      DEPENDS_ON=null
+      }
+
+
+

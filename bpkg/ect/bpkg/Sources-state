@@ -1,0 +1,13 @@
+##################################
+
+# Bpkg State file
+# this file adds the INSTALLED or AVAILABLE flags 
+
+##################################
+
+# Just a Dummy Package
+SOURCEPKG=bpkgtest {
+              flags=AVAILABLE
+          }
+
+
