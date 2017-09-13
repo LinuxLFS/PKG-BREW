@@ -23,12 +23,21 @@ tar=/bin/tar
 # Functions
 
 # gets Package Name From User Input    
+function ResolvePackageName        {
             read -p 'Enter Package You would like to Brew : ' PKG_NAME   
             echo "${grn}
               You Would like to Brew $PKG_NAME ?
             ${txtrst}"
-            wget -i $PWD/lists.d/packages/$PKG_NAME.bpkg -P /usr/bpkg/source/$PKG_NAME
-             
+}
+
+ResolvePackageName 
+
+function DownloadPackage           {
+            wget -i $PWD/lists.d/packages/$PKG_NAME.bpkg -o /usr/bpkg/source/$PKG_NAME
+            
+}
+
+ DownloadPackage        
 
 
  
